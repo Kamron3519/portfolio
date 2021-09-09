@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        .box{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .navbar{
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 15%;
+            background-color: rgba(0, 0, 0, 0.301);
+            z-index: 999;
+        }
+        .item{
+            width: 100%;
+            height: 5vh;
+            border-bottom: 2px solid aqua;
+            display: flex;
+            font-size: 20px;
+            text-transform: uppercase;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .item:hover{
+            border-left: 5px solid aqua;
+        }
+        .main{
+            opacity: 1;
+            background-color: rgb(107, 185, 33);
+        }
+        .box1{
+            opacity: 0;;
+            background-color: rgb(219, 83, 208);
+        }
+        .box2{
+            opacity: 0;
+            background-color: rgb(214, 155, 77);
+        }
+        .p1{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+        }
+        .active{
+            opacity: 1;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    
+        <div class="navbar">
+            <div class="home item" onclick="myfnc1()">Home</div>
+            <div class="about item" onclick="myfnc2()">About</div>
+            <div class="contact item" onclick="myfnc3()">Contact</div>
+        </div>
+    <div class="main box" ><p class="p1">Home</p></div>
+    <div class="box1 box"><p class="p1">About</p></div>
+    <div class="box2 box"><xp class="p1">About</xp></div>
+    <script>
+        var home = document.querySelector(".home")
+        var about = document.querySelector(".about")
+        var contact = document.querySelector(".contact")
+        var main = document.querySelector(".main")
+        var box1 = document.querySelector(".box1")
+        var box2 = document.querySelector(".box2")
+        function myfnc1(){
+            main.classList.add("active")
+            box1.classList.remove("active")
+            box2.classList.remove("active")
+        }
+        function myfnc2(){
+            main.classList.remove("active")
+            box1.classList.add("active")
+            box2.classList.remove("active")
+        }
+        function myfnc3(){
+            main.classList.remove("active")
+            box1.classList.remove("active")
+            box2.classList.add("active")
+        }
+    </script>
+</body>
+</html>

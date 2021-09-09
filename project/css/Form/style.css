@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: url(img18.jpg) no-repeat top center;
+    background-size: cover;
+    height: 100vh;   
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 20px;
+}
+
+.contact-form
+{
+    max-width: 550px;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.8);
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 2px 3px 4px 3px rgba(255,255,255,0.6);
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+}
+.input-field, .msg {
+    width: 48%;
+}
+
+.input-field .input,
+.msg textarea {
+    margin: 10px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid white;
+    padding: 10px;
+    color: white;
+    width: 100%;   
+}
+
+.msg textarea {
+    height: 208px;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+    text-align: center;
+}
+
+::-moz-input-placeholder {
+    color: white;
+    text-align: center;
+}
+
+::-ms-input-placeholder {
+    color: white;
+    text-align: center;
+}
+
+.btn {
+    background-color: darkcyan;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px){
+    .contact-form{
+        flex-direction: column;
+    }
+    .msg textarea {
+        height: 80px;
+    }
+    .input-field, .msg
+    {
+        width: 100%;
+    }
+}

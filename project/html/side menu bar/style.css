@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+    font-family: Arial,sans-serif;
+    --text1: #b6b6b6;
+    --text2: #ececec;
+    --bg-first: #FAF0E6;
+    --bg-second: #141418;
+}
+
+body {
+    color: black;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #6649b8; /*Purple*/
+}
+
+main  {
+    margin-left: 7rem;
+    padding: 3rem;
+    
+}
+
+.navbar{
+    padding: 0;
+    margin: 0;
+    width: 7rem;
+    height: 100vh;
+    position: fixed;
+    background: var(--bg-first);
+    transition: 200ms ease-in;
+}
+
+img {
+    max-height: 50px;
+    max-width: 50px;
+    margin-left: 1.5rem;
+}
+
+.navbar-nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.nav-item:last-child {
+    margin-top: auto;
+}
+
+.nav-link {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 5rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--text1);
+    text-decoration: none;
+}
+.icons {
+
+}
+
+.link-text {
+    display: none;
+    margin-left: 4rem;
+    
+}
+
+.navbar:hover {
+    width: 17rem;
+}
+
+.navbar:hover .link-text {
+    display: block;
+}
+
+.navbar:hover .arrow {
+    transform: rotate(-180deg);
+    transition: 0.5s;
+}
+.nav-link:hover {
+    background-color: lightblue;
+}
+
+
+
